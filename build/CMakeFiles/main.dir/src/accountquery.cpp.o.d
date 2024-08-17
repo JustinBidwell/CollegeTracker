@@ -1,7 +1,7 @@
 CMakeFiles/main.dir/src/accountquery.cpp.o: \
- /home/justin/programming/c++/test/src/accountquery.cpp \
+ /home/justin/programming/c++/CollegeTracker/src/accountquery.cpp \
  /usr/include/stdc-predef.h \
- /home/justin/programming/c++/test/src/../include/include.h \
+ /home/justin/programming/c++/CollegeTracker/src/../include/class.h \
  /usr/include/c++/14.1.1/iostream \
  /usr/include/c++/14.1.1/bits/requires_hosted.h \
  /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -144,11 +144,23 @@ CMakeFiles/main.dir/src/accountquery.cpp.o: \
  /usr/include/c++/14.1.1/bits/locale_facets.tcc \
  /usr/include/c++/14.1.1/bits/basic_ios.tcc \
  /usr/include/c++/14.1.1/bits/ostream.tcc /usr/include/c++/14.1.1/istream \
- /usr/include/c++/14.1.1/bits/istream.tcc /usr/local/include/pqxx/pqxx \
- /usr/local/include/pqxx/internal/header-pre.hxx \
- /usr/include/c++/14.1.1/version \
- /usr/local/include/pqxx/config-public-compiler.h \
- /usr/local/include/pqxx/array.hxx /usr/include/c++/14.1.1/algorithm \
+ /usr/include/c++/14.1.1/bits/istream.tcc /usr/include/sys/ioctl.h \
+ /usr/include/bits/ioctls.h /usr/include/asm/ioctls.h \
+ /usr/include/asm-generic/ioctls.h /usr/include/linux/ioctl.h \
+ /usr/include/asm/ioctl.h /usr/include/asm-generic/ioctl.h \
+ /usr/include/bits/ioctl-types.h /usr/include/sys/ttydefaults.h \
+ /usr/include/unistd.h /usr/include/bits/posix_opt.h \
+ /usr/include/bits/environments.h /usr/include/bits/confname.h \
+ /usr/include/bits/getopt_posix.h /usr/include/bits/getopt_core.h \
+ /usr/include/bits/unistd_ext.h /usr/include/linux/close_range.h \
+ /usr/include/c++/14.1.1/vector \
+ /usr/include/c++/14.1.1/bits/stl_uninitialized.h \
+ /usr/include/c++/14.1.1/bits/stl_vector.h \
+ /usr/include/c++/14.1.1/bits/stl_bvector.h \
+ /usr/include/c++/14.1.1/bits/vector.tcc \
+ /home/justin/programming/c++/CollegeTracker/src/../include/include.h \
+ /home/justin/programming/c++/CollegeTracker/src/../include/../include/json.hpp \
+ /usr/include/c++/14.1.1/algorithm \
  /usr/include/c++/14.1.1/bits/stl_algo.h \
  /usr/include/c++/14.1.1/bits/algorithmfwd.h \
  /usr/include/c++/14.1.1/bits/stl_heap.h \
@@ -158,23 +170,19 @@ CMakeFiles/main.dir/src/accountquery.cpp.o: \
  /usr/include/c++/14.1.1/bits/ranges_algobase.h \
  /usr/include/c++/14.1.1/pstl/glue_algorithm_defs.h \
  /usr/include/c++/14.1.1/pstl/execution_defs.h \
- /usr/include/c++/14.1.1/cassert /usr/include/assert.h \
- /usr/include/c++/14.1.1/utility \
- /usr/include/c++/14.1.1/bits/stl_relops.h /usr/include/c++/14.1.1/vector \
- /usr/include/c++/14.1.1/bits/stl_uninitialized.h \
- /usr/include/c++/14.1.1/bits/stl_vector.h \
- /usr/include/c++/14.1.1/bits/stl_bvector.h \
- /usr/include/c++/14.1.1/bits/vector.tcc \
- /usr/local/include/pqxx/connection.hxx /usr/include/c++/14.1.1/ctime \
- /usr/include/c++/14.1.1/list /usr/include/c++/14.1.1/bits/stl_list.h \
- /usr/include/c++/14.1.1/bits/allocated_ptr.h \
+ /usr/include/c++/14.1.1/functional \
+ /usr/include/c++/14.1.1/bits/std_function.h \
+ /usr/include/c++/14.1.1/unordered_map \
+ /usr/include/c++/14.1.1/bits/unordered_map.h \
+ /usr/include/c++/14.1.1/bits/hashtable.h \
+ /usr/include/c++/14.1.1/bits/hashtable_policy.h \
  /usr/include/c++/14.1.1/ext/aligned_buffer.h \
- /usr/include/c++/14.1.1/bits/list.tcc /usr/include/c++/14.1.1/map \
- /usr/include/c++/14.1.1/bits/stl_tree.h \
+ /usr/include/c++/14.1.1/bits/enable_special_members.h \
  /usr/include/c++/14.1.1/bits/node_handle.h \
- /usr/include/c++/14.1.1/bits/stl_map.h \
- /usr/include/c++/14.1.1/bits/stl_multimap.h \
- /usr/include/c++/14.1.1/bits/erase_if.h /usr/include/c++/14.1.1/memory \
+ /usr/include/c++/14.1.1/bits/erase_if.h /usr/include/c++/14.1.1/array \
+ /usr/include/c++/14.1.1/iterator \
+ /usr/include/c++/14.1.1/bits/stream_iterator.h \
+ /usr/include/c++/14.1.1/memory \
  /usr/include/c++/14.1.1/bits/stl_raw_storage_iter.h \
  /usr/include/c++/14.1.1/bits/align.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/stdint.h \
@@ -183,6 +191,7 @@ CMakeFiles/main.dir/src/accountquery.cpp.o: \
  /usr/include/c++/14.1.1/bits/unique_ptr.h \
  /usr/include/c++/14.1.1/bits/shared_ptr.h \
  /usr/include/c++/14.1.1/bits/shared_ptr_base.h \
+ /usr/include/c++/14.1.1/bits/allocated_ptr.h \
  /usr/include/c++/14.1.1/ext/concurrence.h \
  /usr/include/c++/14.1.1/bits/shared_ptr_atomic.h \
  /usr/include/c++/14.1.1/bits/atomic_base.h \
@@ -194,68 +203,98 @@ CMakeFiles/main.dir/src/accountquery.cpp.o: \
  /usr/include/limits.h /usr/include/bits/posix1_lim.h \
  /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
  /usr/include/bits/posix2_lim.h /usr/include/bits/xopen_lim.h \
- /usr/include/bits/uio_lim.h /usr/include/unistd.h \
- /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
- /usr/include/bits/confname.h /usr/include/bits/getopt_posix.h \
- /usr/include/bits/getopt_core.h /usr/include/bits/unistd_ext.h \
- /usr/include/linux/close_range.h /usr/include/syscall.h \
+ /usr/include/bits/uio_lim.h /usr/include/syscall.h \
  /usr/include/sys/syscall.h /usr/include/asm/unistd.h \
  /usr/include/asm/unistd_64.h /usr/include/bits/syscall.h \
  /usr/include/c++/14.1.1/bits/std_mutex.h \
  /usr/include/c++/14.1.1/backward/auto_ptr.h \
  /usr/include/c++/14.1.1/bits/ranges_uninitialized.h \
  /usr/include/c++/14.1.1/pstl/glue_memory_defs.h \
- /usr/local/include/pqxx/errorhandler.hxx \
- /usr/local/include/pqxx/types.hxx /usr/include/c++/14.1.1/iterator \
- /usr/include/c++/14.1.1/bits/stream_iterator.h \
- /usr/local/include/pqxx/except.hxx \
- /usr/local/include/pqxx/internal/concat.hxx \
- /usr/local/include/pqxx/strconv.hxx /usr/include/c++/14.1.1/charconv \
- /usr/include/c++/14.1.1/cstring /usr/include/string.h \
- /usr/include/strings.h /usr/include/c++/14.1.1/limits \
- /usr/include/c++/14.1.1/sstream /usr/include/c++/14.1.1/bits/sstream.tcc \
- /usr/include/c++/14.1.1/ranges /usr/include/c++/14.1.1/optional \
- /usr/include/c++/14.1.1/bits/enable_special_members.h \
- /usr/include/c++/14.1.1/span /usr/include/c++/14.1.1/array \
- /usr/local/include/pqxx/util.hxx /usr/include/c++/14.1.1/functional \
- /usr/include/c++/14.1.1/bits/std_function.h \
- /usr/include/c++/14.1.1/unordered_map \
- /usr/include/c++/14.1.1/bits/unordered_map.h \
- /usr/include/c++/14.1.1/bits/hashtable.h \
- /usr/include/c++/14.1.1/bits/hashtable_policy.h \
- /usr/local/include/pqxx/version.hxx \
- /usr/local/include/pqxx/internal/libpq-forward.hxx \
- /usr/local/include/pqxx/internal/ignore-deprecated-pre.hxx \
- /usr/local/include/pqxx/internal/ignore-deprecated-post.hxx \
- /usr/local/include/pqxx/zview.hxx \
- /usr/local/include/pqxx/internal/conversions.hxx \
- /usr/include/c++/14.1.1/numeric \
- /usr/include/c++/14.1.1/bits/stl_numeric.h \
- /usr/include/c++/14.1.1/pstl/glue_numeric_defs.h \
- /usr/include/c++/14.1.1/variant \
+ /usr/include/c++/14.1.1/utility \
+ /usr/include/c++/14.1.1/bits/stl_relops.h \
+ /usr/include/c++/14.1.1/forward_list \
+ /usr/include/c++/14.1.1/bits/forward_list.h \
+ /usr/include/c++/14.1.1/bits/forward_list.tcc \
+ /usr/include/c++/14.1.1/map /usr/include/c++/14.1.1/bits/stl_tree.h \
+ /usr/include/c++/14.1.1/bits/stl_map.h \
+ /usr/include/c++/14.1.1/bits/stl_multimap.h \
+ /usr/include/c++/14.1.1/valarray /usr/include/c++/14.1.1/cmath \
+ /usr/include/math.h /usr/include/bits/math-vector.h \
+ /usr/include/bits/libm-simd-decl-stubs.h \
+ /usr/include/bits/flt-eval-method.h /usr/include/bits/fp-logb.h \
+ /usr/include/bits/fp-fast.h \
+ /usr/include/bits/mathcalls-helper-functions.h \
+ /usr/include/bits/mathcalls.h /usr/include/bits/mathcalls-narrow.h \
+ /usr/include/bits/iscanonical.h /usr/include/c++/14.1.1/bits/specfun.h \
+ /usr/include/c++/14.1.1/limits /usr/include/c++/14.1.1/tr1/gamma.tcc \
+ /usr/include/c++/14.1.1/tr1/special_function_util.h \
+ /usr/include/c++/14.1.1/tr1/bessel_function.tcc \
+ /usr/include/c++/14.1.1/tr1/beta_function.tcc \
+ /usr/include/c++/14.1.1/tr1/ell_integral.tcc \
+ /usr/include/c++/14.1.1/tr1/exp_integral.tcc \
+ /usr/include/c++/14.1.1/tr1/hypergeometric.tcc \
+ /usr/include/c++/14.1.1/tr1/legendre_function.tcc \
+ /usr/include/c++/14.1.1/tr1/modified_bessel_func.tcc \
+ /usr/include/c++/14.1.1/tr1/poly_hermite.tcc \
+ /usr/include/c++/14.1.1/tr1/poly_laguerre.tcc \
+ /usr/include/c++/14.1.1/tr1/riemann_zeta.tcc \
+ /usr/include/c++/14.1.1/bits/valarray_array.h \
+ /usr/include/c++/14.1.1/bits/valarray_array.tcc \
+ /usr/include/c++/14.1.1/bits/valarray_before.h \
+ /usr/include/c++/14.1.1/bits/slice_array.h \
+ /usr/include/c++/14.1.1/bits/valarray_after.h \
+ /usr/include/c++/14.1.1/bits/gslice.h \
+ /usr/include/c++/14.1.1/bits/gslice_array.h \
+ /usr/include/c++/14.1.1/bits/mask_array.h \
+ /usr/include/c++/14.1.1/bits/indirect_array.h \
+ /usr/include/c++/14.1.1/version /usr/include/c++/14.1.1/cassert \
+ /usr/include/assert.h /usr/include/c++/14.1.1/cstring \
+ /usr/include/string.h /usr/include/strings.h \
+ /usr/include/c++/14.1.1/filesystem /usr/include/c++/14.1.1/bits/fs_fwd.h \
+ /usr/include/c++/14.1.1/bits/chrono.h /usr/include/c++/14.1.1/ratio \
+ /usr/include/c++/14.1.1/ctime \
  /usr/include/c++/14.1.1/bits/parse_numbers.h \
- /usr/local/include/pqxx/params.hxx \
- /usr/local/include/pqxx/internal/statement_parameters.hxx \
- /usr/local/include/pqxx/binarystring.hxx \
- /usr/local/include/pqxx/result.hxx \
- /usr/local/include/pqxx/internal/encodings.hxx \
- /usr/include/c++/14.1.1/iomanip /usr/include/c++/14.1.1/locale \
+ /usr/include/c++/14.1.1/bits/fs_path.h /usr/include/c++/14.1.1/locale \
  /usr/include/c++/14.1.1/bits/locale_facets_nonio.h \
  /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/time_members.h \
  /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/messages_members.h \
  /usr/include/libintl.h /usr/include/c++/14.1.1/bits/codecvt.h \
  /usr/include/c++/14.1.1/bits/locale_facets_nonio.tcc \
  /usr/include/c++/14.1.1/bits/locale_conv.h \
+ /usr/include/c++/14.1.1/iomanip \
  /usr/include/c++/14.1.1/bits/quoted_string.h \
+ /usr/include/c++/14.1.1/sstream /usr/include/c++/14.1.1/bits/sstream.tcc \
+ /usr/include/c++/14.1.1/codecvt /usr/include/c++/14.1.1/bits/fs_dir.h \
+ /usr/include/c++/14.1.1/bits/fs_ops.h /usr/include/c++/14.1.1/ranges \
+ /usr/include/c++/14.1.1/optional /usr/include/c++/14.1.1/span \
+ /usr/include/c++/14.1.1/numeric \
+ /usr/include/c++/14.1.1/bits/stl_numeric.h \
+ /usr/include/c++/14.1.1/pstl/glue_numeric_defs.h \
+ /usr/include/c++/14.1.1/any /usr/local/include/pqxx/pqxx \
+ /usr/local/include/pqxx/internal/header-pre.hxx \
+ /usr/local/include/pqxx/config-public-compiler.h \
+ /usr/local/include/pqxx/array.hxx /usr/local/include/pqxx/connection.hxx \
+ /usr/include/c++/14.1.1/list /usr/include/c++/14.1.1/bits/stl_list.h \
+ /usr/include/c++/14.1.1/bits/list.tcc \
+ /usr/local/include/pqxx/errorhandler.hxx \
+ /usr/local/include/pqxx/types.hxx /usr/local/include/pqxx/except.hxx \
+ /usr/local/include/pqxx/internal/concat.hxx \
+ /usr/local/include/pqxx/strconv.hxx /usr/include/c++/14.1.1/charconv \
+ /usr/local/include/pqxx/util.hxx /usr/local/include/pqxx/version.hxx \
+ /usr/local/include/pqxx/internal/libpq-forward.hxx \
+ /usr/local/include/pqxx/internal/ignore-deprecated-pre.hxx \
+ /usr/local/include/pqxx/internal/ignore-deprecated-post.hxx \
+ /usr/local/include/pqxx/zview.hxx \
+ /usr/local/include/pqxx/internal/conversions.hxx \
+ /usr/include/c++/14.1.1/variant /usr/local/include/pqxx/params.hxx \
+ /usr/local/include/pqxx/internal/statement_parameters.hxx \
+ /usr/local/include/pqxx/binarystring.hxx \
+ /usr/local/include/pqxx/result.hxx \
+ /usr/local/include/pqxx/internal/encodings.hxx \
  /usr/local/include/pqxx/internal/encoding_group.hxx \
  /usr/local/include/pqxx/separated_list.hxx \
  /usr/local/include/pqxx/internal/array-composite.hxx \
- /usr/local/include/pqxx/blob.hxx /usr/include/c++/14.1.1/filesystem \
- /usr/include/c++/14.1.1/bits/fs_fwd.h \
- /usr/include/c++/14.1.1/bits/chrono.h /usr/include/c++/14.1.1/ratio \
- /usr/include/c++/14.1.1/bits/fs_path.h /usr/include/c++/14.1.1/codecvt \
- /usr/include/c++/14.1.1/bits/fs_dir.h \
- /usr/include/c++/14.1.1/bits/fs_ops.h \
+ /usr/local/include/pqxx/blob.hxx \
  /usr/local/include/pqxx/dbtransaction.hxx \
  /usr/local/include/pqxx/transaction_base.hxx \
  /usr/local/include/pqxx/internal/stream_query.hxx \

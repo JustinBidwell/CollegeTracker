@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/justin/programming/c++/test/src/accountquery.cpp" "CMakeFiles/main.dir/src/accountquery.cpp.o" "gcc" "CMakeFiles/main.dir/src/accountquery.cpp.o.d"
-  "/home/justin/programming/c++/test/src/main.cpp" "CMakeFiles/main.dir/src/main.cpp.o" "gcc" "CMakeFiles/main.dir/src/main.cpp.o.d"
-  "/home/justin/programming/c++/test/src/menus.cpp" "CMakeFiles/main.dir/src/menus.cpp.o" "gcc" "CMakeFiles/main.dir/src/menus.cpp.o.d"
+  "/home/justin/programming/c++/CollegeTracker/src/accountquery.cpp" "CMakeFiles/main.dir/src/accountquery.cpp.o" "gcc" "CMakeFiles/main.dir/src/accountquery.cpp.o.d"
+  "/home/justin/programming/c++/CollegeTracker/src/main.cpp" "CMakeFiles/main.dir/src/main.cpp.o" "gcc" "CMakeFiles/main.dir/src/main.cpp.o.d"
+  "/home/justin/programming/c++/CollegeTracker/src/menus.cpp" "CMakeFiles/main.dir/src/menus.cpp.o" "gcc" "CMakeFiles/main.dir/src/menus.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

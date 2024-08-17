@@ -1,14 +1,24 @@
 #include "../include/accountquery.h"
+#include "../include/class.h"
 #include "../include/include.h"
 #include <vector>
+
 std::string mainMenu() {
-    std::string header =
-        "\nWELCOME TO COLLEGE COURSE TRACKER! PLEASE SELECT AN OPTION BELOW!";
-    std::cout << header << std::endl;
-    std::cout << std::string(header.length(), '-') << std::endl;
-    std::cout << "[1] Create An Account" << std::endl;
-    std::cout << "[2] Login To Account" << std::endl;
-    std::cout << "[3] Quit" << std::endl;
+    Format menu;
+    menu.displayBorder();
+    menu.header = "WELCOME TO COLLEGE COURSE TRACKER! PLEASE SELECT AN OPTION BELOW";
+    menu.displayHeaderString();
+    menu.displayBorder();
+    std::vector<std::string> choices = {
+        "[1] Create An Account", "[2] Login To Account", "[3] Run NeoFetch", "[4] Quit"
+    };
+
+    for (int i = 0; i < choices.size(); i++) {
+        menu.choice_str = choices[i];
+        menu.displayChoicesString();
+    }
+
+    menu.displayBorder();
     std::cout << "Enter A Choice From The Menu:" << std::endl;
     std::string user_choice;
     std::cin.sync();
@@ -18,12 +28,16 @@ std::string mainMenu() {
 }
 
 void accountMenu() {
-    std::vector<std::string> colors { "0",  "30", "31", "32", "33",
-                                      "34", "35", "36", "37" };
+    std::vector<std::string> colors { "0", "30", "31", "32", "33", "34", "35", "36", "37" };
+    std::vector<std::string> colors_string { "[1] White", "[2] Black",  "[3] Red",
+                                             "[4] Green", "[5] Yellow", "[6] Blue",
+                                             "[7] Pink",  "[8] Cyan",   "[9] Gray" };
+    Format menu;
+    menu.header = "CREATE AN ACCOUNT";
     while (true) {
-        std::string header = "\nCREATE AN ACCOUNT";
-        std::cout << header << std::endl;
-        std::cout << std::string(header.length(), '-') << std::endl;
+        menu.displayBorder();
+        menu.displayHeaderString();
+        menu.displayBorder();
         std::string username = "";
         std::string password = "";
         std::string password_confirm = "";
@@ -48,21 +62,21 @@ void accountMenu() {
         std::getline(std::cin >> std::ws, password_confirm);
 
         if (password == password_confirm) {
-            std::cout << "\nUser Color List" << std::endl;
-            std::cout << "\033[0m[1] White\033[0m" << std::endl;
-            std::cout << "\033[30m[2] Black\033[0m" << std::endl;
-            std::cout << "\033[31m[3] Red\033[0m" << std::endl;
-            std::cout << "\033[32m[4] Green\033[0m" << std::endl;
-            std::cout << "\033[33m[5] Yellow\033[0m" << std::endl;
-            std::cout << "\033[34m[6] Blue\033[0m" << std::endl;
-            std::cout << "\033[35m[7] Pink\033[0m" << std::endl;
-            std::cout << "\033[36m[8] Cyan\033[0m" << std::endl;
-            std::cout << "\033[37m[9] Gray\033[0m" << std::endl;
+            menu.displayBorder();
+            menu.choice_str = "Color Menu";
+            menu.displayChoicesString();
+            for (int i = 0; i < colors_string.size(); i++) {
+                menu.choice_str = colors_string[i];
+                menu.color = colors[i];
+                menu.displayChoicesString();
+            }
+            menu.color = "0";
+            menu.displayBorder();
+
             std::string color;
 
             while (true) {
-                std::cout << "Please Select A Color For Your User: "
-                          << std::endl;
+                std::cout << "Please Select A Color For Your User: " << std::endl;
                 std::cin.clear();
                 std::cin.sync();
                 std::getline(std::cin >> std::ws, color);
@@ -85,7 +99,8 @@ void accountMenu() {
             }
 
             int index = stoi(color);
-            insertAccount(username, password, colors[index - 1]);
+            std::string major = selectMajor(username);
+            insertAccount(username, password, colors[index - 1], major);
             system("clear");
             break;
         } else {
@@ -96,9 +111,11 @@ void accountMenu() {
 
 std::vector<std::string> loginMenu() {
     while (true) {
-        std::string header = "\nLOGIN TO YOUR ACCOUNT";
-        std::cout << header << std::endl;
-        std::cout << std::string(header.length(), '-') << std::endl;
+        Format menu;
+        menu.displayBorder();
+        menu.header = "LOGIN TO YOUR ACCOUNT";
+        menu.displayHeaderString();
+        menu.displayBorder();
         std::string username;
         std::string password;
 
@@ -117,20 +134,26 @@ std::vector<std::string> loginMenu() {
             system("clear");
             return data;
         } else {
-            std::cout
-                << "**USERNAME OR PASSWORD IS INCORRECT; PLEASE TRY AGAIN**"
-                << std::endl;
+            std::cout << "**USERNAME OR PASSWORD IS INCORRECT; PLEASE TRY AGAIN**" << std::endl;
         }
     }
 }
 
 std::string collegeMenu() {
-    std::string header = "WELCOME TO COLLEGE COURSE TRACKER";
-    std::cout << header << std::endl;
-    std::cout << std::string(header.length(), '-') << std::endl;
-    std::cout << "[1] Logout" << std::endl;
-    std::string user_entry;
+    std::vector<std::string> options = { "[1] Logout" };
+    Format menu;
+    menu.header = "WELCOME TO COLLEGE COURSE TRACKER";
+    menu.displayBorder();
+    menu.displayHeaderString();
+    menu.displayBorder();
 
+    for (int i = 0; i < options.size(); i++) {
+        menu.choice_str = options[i];
+        menu.displayChoicesString();
+    }
+    menu.displayBorder();
+
+    std::string user_entry;
     std::cin.clear();
     std::cin.sync();
     std::cout << "Enter A Choice From The Menu: " << std::endl;

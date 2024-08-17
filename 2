@@ -1,0 +1,12 @@
+import requests
+from bs4 import BeautifulSoup
+
+print("hello world")
+r = requests.get(
+    "https://engineering.msu.edu/academics/majors-degrees/computer-engineering-bs#curriculum"
+)
+
+soup = BeautifulSoup(r.content, "html.parser")
+
+for table in soup.find_all("table"):
+    print(table)
