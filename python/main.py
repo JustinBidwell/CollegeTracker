@@ -76,16 +76,38 @@ for degree in major_degrees:
             spring.append(data[i])
             spring.append(data[i + 1])
             check = True
-
     college_year = ["freshman", "sophmore", "junior", "senior"]
     count = 0
     degree_dicitonary = {}
+
     for i in range(0, len(fixed_data), 2):
         fall_dict = {}
         spring_dict = {}
         for fall in range(0, len(fixed_data[i]), 2):
+            count1 = 2
+            while True:
+                if fixed_data[i][fall] in fall_dict:
+                    if count1 == 2:
+                        fixed_data[i][fall] += " #" + str(count1)
+                    else:
+                        fixed_data[i][fall] = fixed_data[i][fall][:-1] + str(count1)
+                    count1 += 1
+                else:
+                    break
             fall_dict[fixed_data[i][fall]] = fixed_data[i][fall + 1]
         for spring in range(0, len(fixed_data[i + 1]), 2):
+            count2 = 2
+            while True:
+                if fixed_data[i + 1][spring] in spring_dict:
+                    if count2 == 2:
+                        fixed_data[i + 1][spring] += " #" + str(count2)
+                    else:
+                        fixed_data[i + 1][spring] = fixed_data[i + 1][spring][
+                            :-1
+                        ] + str(count2)
+                    count2 += 1
+                else:
+                    break
             spring_dict[fixed_data[i + 1][spring]] = fixed_data[i + 1][spring + 1]
 
         degree_dicitonary[college_year[count]] = {
@@ -93,7 +115,6 @@ for degree in major_degrees:
             "spring": spring_dict,
         }
         count += 1
-
     degree_dictionary_json = json.dumps(degree_dicitonary)
 
     with psycopg.connect("dbname=college user=postgres password=Learn8128") as conn:

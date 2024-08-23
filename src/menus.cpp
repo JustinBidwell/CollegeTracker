@@ -140,9 +140,39 @@ std::vector<std::string> loginMenu() {
 }
 
 std::string collegeMenu() {
-    std::vector<std::string> options = { "[1] Logout" };
+    std::vector<std::string> options = {
+        "[1] Display Classes", "[2] Update Classes", "[3] Display Stats", "[4] Logout"
+    };
     Format menu;
     menu.header = "WELCOME TO COLLEGE COURSE TRACKER";
+    menu.displayBorder();
+    menu.displayHeaderString();
+    menu.displayBorder();
+
+    for (int i = 0; i < options.size(); i++) {
+        menu.choice_str = options[i];
+        menu.displayChoicesString();
+    }
+    menu.displayBorder();
+
+    std::string user_entry;
+    std::cin.clear();
+    std::cin.sync();
+    std::cout << "Enter A Choice From The Menu: " << std::endl;
+    std::getline(std::cin >> std::ws, user_entry);
+
+    system("clear");
+    return user_entry;
+}
+
+std::string displayClassesMenu() {
+    std::vector<std::string> options = { "[1] Display All Classes",   "[2] Display Freshman Year",
+                                         "[3] Display Sophmore Year", "[4] Display Junior Year",
+                                         "[5] Display Senior Year",   "[6] Display Completed",
+                                         "[7] Display In Progress",   "[8] Display Scheduled",
+                                         "[9] Display Not Taken",     "[10] Go Back" };
+    Format menu;
+    menu.header = "OPTIONS MENU";
     menu.displayBorder();
     menu.displayHeaderString();
     menu.displayBorder();

@@ -17,6 +17,7 @@ public:
     std::string symbol = "*";
     std::string accent_symbol = "|";
     std::string color = "0";
+    std::string single_color = "0";
     bool border = true;
     int width;
     Format() {
@@ -36,7 +37,8 @@ public:
         std::cout << buildLeftString(class_len, class_str, true, true, color);
         std::cout << buildLeftString(MONTH_LEN, month_str, false, false, color);
         std::cout << buildLeftString(CREDIT_LEN, credit_str, true, true, color);
-        std::cout << buildLeftString(STATUS_LEN, status_str, false, true, color) << std::endl;
+        std::cout << buildLeftString(STATUS_LEN, status_str, false, true, single_color)
+                  << std::endl;
     }
     void displayBorder() {
         for (int i = 0; i < width; i++) {

@@ -3,3 +3,4 @@ std::string mainMenu();
 void accountMenu();
 std::vector<std::string> loginMenu();
 std::string collegeMenu();
+std::string displayClassesMenu();
